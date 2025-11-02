@@ -1,6 +1,7 @@
 MDScreen:
     MDBoxLayout:
         orientation: 'vertical'
+        id:picker_box
         MDBoxLayout:
             size_hint_y: .1
             
@@ -15,8 +16,14 @@ MDScreen:
             
         
         MDBoxLayout:
-            id:picker_box
+            
             size_hint_y: .1
+            canvas: 
+                Color: 
+                    rgba: (.2,.3,.4,.1)
+                Rectangle: 
+                    size:self.size
+                    pos:self.pos
             MDLabel:
                 id:picker_text
                 text:"COLOR"
