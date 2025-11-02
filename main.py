@@ -40,5 +40,11 @@ class ColorPickerApp(MDApp):
             Color(*selected_color)
             Rectangle(pos=picker_box.pos,size=picker_box.size)
 
+    def close_app(self):
+        if hasattr(self, "picker"):
+            self.picker.dismiss()
+        self.stop()
+
+
 ColorPickerApp().run()
     
